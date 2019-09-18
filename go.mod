@@ -1,4 +1,4 @@
-module github.com/rickiey/go-tuils
+module github.com/rickiey/go-utils
 
 go 1.12
 
