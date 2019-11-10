@@ -1,10 +1,8 @@
-package utils
+package tool
 
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/kennygrant/sanitize"
-	"html"
 	"regexp"
 	"strings"
 )
@@ -62,9 +60,7 @@ func IsNumeric(s string) bool {
 	return true
 }
 
-//SanitizeText 得到安全的文本
-func SanitizeText(str string) string {
-	s2 := sanitize.HTML(str)
-	s3 := html.EscapeString(s2)
-	return s3
+func JsonString(v interface{}) string {
+	b, _ := json.Marshal(v)
+	return strings.TrimSpace(string(b))
 }

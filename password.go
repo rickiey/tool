@@ -1,4 +1,4 @@
-package utils
+package tool
 
 import (
 	"golang.org/x/crypto/bcrypt"
